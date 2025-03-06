@@ -35,8 +35,7 @@ def upload_certificate(client, domain_name, cert_path, key_path):
     request.set_SSLProtocol('on')
     request.set_SSLPub(cert)
     request.set_SSLPri(key)
-    region = get_env_var('ALIYUN_CDN_DOMAIN_REGION')
-    request.set_CertRegion(region)
+    request.set_CertRegion('cn-hangzhou')
 
     response = client.do_action_with_exception(request)
     print(str(response, encoding='utf-8'))
