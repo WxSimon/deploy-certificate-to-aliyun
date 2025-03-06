@@ -36,7 +36,6 @@ def upload_certificate(client, domain_name, cert_path, key_path):
     request.set_SSLPub(cert)
     request.set_SSLPri(key)
     request.set_CertRegion('cn-hangzhou')
-
     response = client.do_action_with_exception(request)
     print(str(response, encoding='utf-8'))
 
