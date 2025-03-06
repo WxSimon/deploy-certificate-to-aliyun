@@ -53,5 +53,6 @@ def main():
         key_path = f'~/certs/{domain}/privkey.pem'
         upload_certificate(client, cdn_domain, cert_path, key_path)
 
+
 if __name__ == "__main__":
     main()
